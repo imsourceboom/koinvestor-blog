@@ -1,0 +1,46 @@
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--project--list
+        include ../../components/control
+        ul.sort
+            li.on 작성일순
+            li 
+                a 원문 날짜순
+            li 
+                a
+                    div 작성자순
+                img
+        article.list
+            .head
+                ul
+                    li
+                        input(type="checkbox" id="allcheck")
+                        label(for="allcheck")
+                            span
+                    - let head = ['#', '제목', '작성자', '작성일']
+                    each h in head
+                        li= h
+            .body
+                - for (let i = 1; i < 16; i++)
+                    ul
+                        li
+                            input(type="checkbox" id=`b${i}`)
+                            label(for=`b${i}`)
+                                span
+                        li= i
+                        - let body = ['제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.', '프로젝트명', '18-11-30']
+                        each b in body
+                            li= b
+                //- .empty--data--box 데이터가 없습니다.
+            .footer
+                ul
+                    li
+                        a(href="#") Prev
+                    li.page.active
+                        a(href="#") 1
+                    - for (let i = 2; i <= 5; i++)
+                        li.page
+                            a(href="#")= i
+                    li
+                        a(href="#") Next

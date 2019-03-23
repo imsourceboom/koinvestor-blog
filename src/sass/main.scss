@@ -1,0 +1,54 @@
+@import 'utils/var',
+'utils/mixins';
+
+@import 'base/reset',
+'base/typography',
+'base/base';
+
+@import 'library/flatpickr';
+
+@import 'layout/main',
+'layout/header',
+'layout/footer';
+
+@import 'components/grid',
+'components/loading',
+'components/menu';
+
+@import 'pages/root';
+@import 'pages/project';
+@import 'pages/detail';
+@import 'pages/login';
+@import 'pages/result';
+@import 'pages/mypage';
+
+
+@import 'admin/admin';
+
+// intro
+/*
+.intro {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #fff;
+  transition: .7s;
+
+  &.off {
+    opacity: 0;
+    z-index: -1;
+    display: none;
+  }
+
+  img {
+    @include centered();
+    width: 13rem;
+
+    @media (min-width: $mobile) {
+      width: 20rem;
+    }
+  }
+}
+*/

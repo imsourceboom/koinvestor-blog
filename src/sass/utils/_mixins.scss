@@ -1,0 +1,229 @@
+@mixin textellipsis($row) {
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+}
+
+
+@mixin flexCentered() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centeredX() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin centeredY() {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin selectedDotIndicator($size, $color) {
+  position: relative;
+
+  &::before {
+    @include centeredX();
+    bottom: 3px;
+    content: ' ';
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color;
+  }
+}
+
+@mixin triangleUp($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-left: calc(#{$width} / 2) solid transparent;
+  border-right: calc(#{$width} / 2) solid transparent;
+  border-bottom: $height solid $color;
+}
+
+@mixin triangleDown($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-left: calc(#{$width} / 2) solid transparent;
+  border-right: calc(#{$width} / 2) solid transparent;
+  border-top: $height solid $color;
+}
+
+@mixin textEllipsis() {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 모바일에서만 표시
+@mixin isMobileOnly($display: null) {
+  @if ($display) {
+    display: $display;
+
+    @media only screen and (min-width: $desktopBP) {
+      display: none;
+    }
+  }
+
+  @else {
+    display: block;
+
+    @media only screen and (min-width: $desktopBP) {
+      display: none;
+    }
+  }
+}
+
+// 데스크탑에서만 표시
+@mixin isDesktopOnly($display: null) {
+  @if ($display) {
+    display: none;
+
+    @media only screen and (min-width: $desktopBP) {
+      display: $display;
+    }
+  }
+
+  @else {
+    display: none;
+
+    @media only screen and (min-width: $desktopBP) {
+      display: block;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// admin 관련 mixins
+@mixin adminSection() {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    & {
+      padding: 0 2rem;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    & {
+      padding-left: 28%;
+    }
+  }
+}
+
+@mixin adminButton() {
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .1);
+  }
+}
+
+@mixin adminSelect() {
+  // height: 34px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: .25rem;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, .54);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+@mixin customCheckbox($borderColor:rgba(0, 0, 0, .1), $checkColor: rgb(255, 59, 59)) {
+  display: none;
+
+  &+label {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid $borderColor;
+    background-color: #fff;
+    border-radius: .25rem;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 3px;
+      background-color: $checkColor;
+      opacity: 0;
+      transition: .5s;
+      transform: rotate(45deg) translate(.2rem, .43rem);
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 15px;
+        height: 3px;
+        background-color: $checkColor;
+        transform: rotate(90deg) translate(-1.2rem, -.06rem);
+      }
+    }
+  }
+
+  &:checked+label {
+    span {
+      opacity: 1;
+    }
+  }
+}

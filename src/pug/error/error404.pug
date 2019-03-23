@@ -1,0 +1,95 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        title KOINVESTOR
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean")
+        style(type="text/css").
+            * {
+                margin: 0;
+            }
+            body {
+                height: 100vh;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: 'Noto Sans KR', sans-serif;
+                color: rgba(0,0,0, .74);
+            }
+            ul, ol {
+                list-style:none;
+                padding: 0;
+            }
+            a {
+                text-decoration: none;
+                color: rgba(0,0,0, .74);
+            }
+            .container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .wrap {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0 1rem;
+            }
+            .code {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+            .comment {
+                text-align: center;
+                font-size: 1.1rem;
+                padding: .6rem 0 2rem 0;
+            }
+            .move {
+                display: inline-block;
+                padding: .7rem .5rem;
+                font-size: 0.88rem;
+                border: 1px solid rgba(0,0,0,.3);
+            }
+            @media (min-width:768px) {
+                .code {
+                    font-size: 1.25rem;
+                }
+                .comment {
+                    font-size: 1.65rem;
+                }
+            }
+            @media (min-width:992px) {
+                .container {
+                    display: initial;
+                }
+                .wrap {
+                    display: block;
+                    padding: 0;
+                    margin-top: 7rem;
+                    margin-left: 15rem;
+                }
+                .code {
+                    font-size: 1.3rem;
+                }
+                .comment {
+                    text-align: start;
+                    font-size: 1.8rem;
+                }
+                .comment br {
+                    display: none;
+                }
+            }
+
+    body
+        .container
+            .wrap
+                .code 에러코드 404
+                .comment 
+                    | 연결하려는 페이지를 찾을 수 없습니다.
+                a.move(href="https://blog.koinvestor.com") 블로그 코인베스터 홈페이지 바로가기
+        
+            

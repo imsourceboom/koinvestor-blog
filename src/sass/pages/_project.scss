@@ -1,0 +1,95 @@
+.project {
+
+    .selected {
+        @include flexCentered();
+        flex-direction: column;
+        padding: 3rem 0;
+
+        a {
+            @include flexCentered();
+
+            img {
+                width: 2rem;
+            }
+
+            .ko {
+                padding: 0 .8rem;
+                color: rgba(0, 0, 0, .84);
+            }
+
+            .en {
+                color: rgba(0, 0, 0, .44);
+                font-weight: 500;
+            }
+        }
+
+
+        @media (min-width: $mobile) {
+            & {
+                padding: 4rem 0;
+            }
+        }
+
+        @media (min-width: $tablet) {
+            & {
+                font-size: 1.1rem;
+            }
+
+            & img {
+                width: 2.25rem;
+            }
+        }
+
+        @media (min-width: $desktop) {
+            & {
+                font-size: 1.15rem;
+            }
+
+            & img {
+                width: 2.5rem;
+            }
+        }
+
+        div {
+            color: rgba(0, 0, 0, .44);
+            font-size: .9375rem;
+            font-weight: 500;
+            padding: 1rem 0;
+        }
+    }
+
+    .in--section--project {
+        padding-top: 0px;
+        padding-bottom: 1rem;
+
+        @media (min-width: $desktop) {
+            & {
+                padding-bottom: 4rem;
+            }
+        }
+    }
+
+    .empty {
+        position: relative;
+        padding: 3rem 0;
+        text-align: center;
+
+        .stick {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 5px;
+            background-color: #000;
+        }
+
+        .comment {
+            padding: 2rem 0;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, .44);
+        }
+    }
+
+
+}

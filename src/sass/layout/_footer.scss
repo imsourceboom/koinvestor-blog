@@ -1,0 +1,58 @@
+footer {
+    width: 100%;
+    padding-bottom: 3rem;
+    line-height: 1.5;
+    color: rgb(59, 59, 59);
+
+    &>.wrap {
+        max-width: 984px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (min-width: $tablet) {
+            & {
+                padding: 0 1.8rem;
+                justify-content: space-between;
+            }
+        }
+
+        & .copylight,
+        & .email {
+            opacity: .5;
+        }
+
+        & .provision {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 10px;
+            font-weight: 100;
+            text-align: center;
+
+            @media (min-width: $tablet) {
+                & {
+                    padding: 1rem 0;
+                    text-align: initial;
+
+                    & .sm {
+                        display: none;
+                    }
+
+                    & .md {
+                        display: block;
+                    }
+                }
+            }
+
+            @media (min-width: $desktop) {
+                & {
+                    .md {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+}

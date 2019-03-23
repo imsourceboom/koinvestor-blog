@@ -1,0 +1,39 @@
+
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--project--input
+        form(action="" method="post")
+            .select
+                .selected-image--wrap
+                    img(src="/static/image/project/ambrosus.png", alt="")
+                select
+                    option(selected disabled) 프로젝트 선택
+                    - var projects = ['앰브로서스', '페이파이', '플레이키', '리퀴드', '와인딩트리', '텔레그램']
+                    each p in projects
+                        option= p
+            input.author.omission(type="text" placeholder="작성자")
+            input.title(type="text" placeholder="제목을 입력하세요.")
+            .filebox
+                input(type="text" value="대표이미지" class="file-view" disabled)
+                label(for="filename") 업로드
+                input(type="file" id="filename" class="file-hidden" hidden)
+            input.source(type="text" placeholder="출처")
+            input.date(type="text" placeholder="원문날짜")
+            .manual
+                a(href="/manual.html" target="_blank") 업로드 매뉴얼
+            .cke_wrap
+                textarea(rows="30")
+                div
+            .buttons
+                div
+                    .warning.block *필수정보 누락
+                    button(type="submit") 
+                        span 등록
+                        div 
+                div
+                    .dummy 더미공간
+                    button(type="button") 
+                        span 
+                            a(href="./list.html") 목록
+                        div

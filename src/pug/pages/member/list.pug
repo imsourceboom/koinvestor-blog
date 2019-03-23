@@ -1,0 +1,45 @@
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--member--list
+        include ../../components/control
+        article.list
+            .head
+                ul
+                    li
+                        input(type="checkbox" id="allcheck")
+                        label(for="allcheck")
+                            span
+                    - let head = ['#', '이름', '아이디', '등급', '가입날짜']
+                    each h in head
+                        li= h
+            .body
+                -   for (var i = 1; i < 16; i++)
+                    ul
+                        li
+                            input(type="checkbox" id=`b${i}`)
+                            label(for=`b${i}`)
+                                span
+                        li= i
+                        -   var bodyExample = ['사용자이름','user1234', '사용자', '2018-12-13']
+                        each b in bodyExample
+                            li= b
+            .footer
+                ul
+                    li
+                        a(href="#") Prev
+                    li.page.active
+                        a(href="#") 1
+                    - for (let i = 2; i <= 5; i++)
+                        li.page
+                            a(href="#")= i
+                    li
+                        a(href="#") Next
+        form.condition-search
+            select
+                option(selected disabled) 선택
+                -   var filter = ['사용자', '관리자', '지배자', '이영자']
+                each f in filter
+                    option= f
+            input(type="text")
+            button(type="submit") Search

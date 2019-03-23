@@ -1,0 +1,205 @@
+.root,
+.project,
+.detail {
+
+    // About
+    /*
+    .about {
+        position: relative;
+        min-height: 100vh;
+        opacity: 0;
+        transition: 3.5s;
+
+        &.on {
+            opacity: 1;
+        }
+
+        .box {
+            @include centered();
+            // transform: translate(-50%, -58%);
+            width: fit-content;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 1.5;
+            font-size: 0.94rem;
+
+            .korean {
+                margin-bottom: 16px;
+            }
+
+            .english {
+                color: rgba(0, 0, 0, 0.44);
+            }
+
+            &.rest {
+                display: none;
+            }
+
+            @media (min-width: $mobile) {
+                & {
+                    // transform: translate(-50%, -68%);
+                    font-size: 1rem;
+                }
+
+                &.mobile {
+                    display: none;
+                }
+
+                &.rest {
+                    display: block;
+                }
+            }
+        }
+    }
+    */
+    article.banner {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: 1366px) {
+            & {
+                width: 972px;
+            }
+        }
+
+        .bg--wrap {
+            img {
+                width: 100%;
+            }
+
+            .square {
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .rectangle {
+                display: none;
+            }
+
+            @media (min-width: $tablet) {
+                .square {
+                    display: none;
+                }
+
+                .rectangle {
+                    display: block;
+                }
+            }
+        }
+
+        .comment--wrap {
+            color: rgba(255, 255, 255, .74);
+
+            .mobile,
+            .rest {
+                line-height: 1.3;
+
+                .korean {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .mobile {
+                width: 100%;
+                @include centeredY;
+                text-align: center;
+
+                .korean,
+                .english {
+                    width: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .korean {
+                    animation: swap 8s infinite linear alternate-reverse;
+                }
+
+                .english {
+                    animation: swap 8s infinite linear alternate;
+                }
+
+                @keyframes swap {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    50% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .rest {
+                display: none;
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+            }
+
+            @media (min-width: $tablet) {
+                & {
+                    .mobile {
+                        display: none;
+                    }
+
+                    .rest {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .contents {
+        position: relative;
+
+        padding: {
+            top: 1rem;
+            right: 1rem;
+            bottom: 4rem;
+            left: 1rem;
+        }
+
+        // 모바일 이상
+        @media (min-width: $mobile) {
+            padding: {
+                right: 1.5rem;
+                left: 1.5rem;
+            }
+        }
+
+        @media (min-width: $tablet) {
+            padding: {
+                top: 1.8rem;
+                right: 1.8rem;
+                left: 1.8rem;
+            }
+        }
+
+        @media (min-width: $desktop) {
+            padding: {
+                right: 4rem;
+                left: 4rem;
+            }
+        }
+
+        .projects {
+            position: relative;
+
+            // @import 'components/menu';
+            @import 'components/grid';
+            @import 'components/loading';
+        }
+    }
+
+    // @import 'footer/footer';
+}

@@ -1,0 +1,35 @@
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--member--input
+        form(action="" method="post")
+            .profile-image-container
+                figure
+                    //- img(src="https://pbs.twimg.com/profile_images/799445590614495232/ii6eBROd.jpg")
+            .profile-edit-container
+                input(type="text" placeholder="아이디").omission
+                input(type="text" placeholder="이름")
+                input(type="text" placeholder="비밀번호")
+                .filebox
+                    input(type="text" value="프로필 이미지" class="file-view" disabled)
+                    label(for="filename") 업로드
+                    input(type="file" id="filename" class="file-hidden" hidden)
+                input(type="email" placeholder="E-mail")
+                select
+                    option(selected disabled) 등급선택
+                    -   var filter = ['사용자', '관리자', '지배자', '이영자']
+                    each f in filter
+                        option= f
+
+            .buttons
+                div
+                    .warning.block *필수정보 누락
+                    button(type="submit") 
+                        span 등록
+                        div
+                div
+                    .dummy 더미공간
+                    button(type="button")
+                        span 
+                            a(href="./list.html") 목록
+                        div

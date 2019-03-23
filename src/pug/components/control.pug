@@ -1,0 +1,9 @@
+article.control
+            .new
+                a(href="./input.html") NEW
+            select
+                option(selected disabled) 프로젝트 선택
+                - var projects = ['앰브로서스', '페이파이', '플레이키', '리퀴드', '와인딩트리', '텔레그램']
+                each p in projects
+                    option= p
+            button(type="button") Delete

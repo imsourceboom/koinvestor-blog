@@ -1,0 +1,240 @@
+&.admin--member--list {
+    .control {
+        .new {
+            width: 60%;
+            margin-bottom: 0;
+        }
+
+        select {
+            display: none;
+        }
+    }
+
+    article.list {
+        padding: 1rem 0;
+
+        input[type='checkbox'] {
+            @include customCheckbox(#f2f2f2);
+        }
+
+        .head,
+        .body {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #778ca3;
+                color: #f2f2f2;
+                border-radius: 0.25rem 0.25rem 0 0;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.5rem 0;
+                }
+
+                li:first-child {
+                    width: 10%;
+                    order: 1;
+                }
+
+                li:nth-child(2) {
+                    width: 20%;
+                    order: 2;
+                }
+
+                li:nth-child(3) {
+                    width: 35%;
+                    order: 3;
+                }
+
+                li:nth-child(4) {
+                    width: 50%;
+                    order: 5;
+                }
+
+                li:nth-child(5) {
+                    width: 35%;
+                    order: 4;
+                }
+
+                li:last-child {
+                    width: 50%;
+                    order: 6;
+                }
+
+                @media (min-width: $tablet) {
+                    & {
+                        li {
+                            padding: 1rem 0;
+                        }
+
+                        li:first-child {
+                            flex: 1;
+                            order: 1;
+                        }
+
+                        li:nth-child(2) {
+                            flex: 2;
+                            order: 2;
+                        }
+
+                        li:nth-child(3) {
+                            flex: 4;
+                            order: 3;
+                        }
+
+                        li:nth-child(4) {
+                            flex: 4;
+                            order: 4;
+                        }
+
+                        li:nth-child(5) {
+                            flex: 3;
+                            order: 5;
+                        }
+
+                        li:last-child {
+                            flex: 4;
+                            order: 5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            ul {
+                background-color: #fff;
+                border-radius: initial;
+                color: rgba(0, 0, 0, 0.54);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.64);
+                    font-weight: 500;
+                    transform: translateY(-1px);
+                    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+                }
+
+                li {
+                    input[type='checkbox'] {
+                        @include customCheckbox();
+                    }
+
+                    img {
+                        width: 28px;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            ul {
+                display: flex;
+                background-color: #778ca3;
+                justify-content: center;
+                padding: 0.57rem 0;
+                border-radius: 0 0 0.25rem 0.25rem;
+
+                li {
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    border-radius: 0.25rem;
+
+                    &.active {
+                        background-color: #f2f2f2;
+                    }
+
+                    &:hover {
+                        animation: pagehover 0.7s alternate infinite;
+
+                        @keyframes pagehover {
+                            from {
+                                background-color: rgba(255, 255, 255, 0.1);
+                            }
+
+                            to {
+                                background-color: rgba(255, 255, 255, 0.3);
+                            }
+                        }
+                    }
+
+                    a {
+                        color: #f2f2f2;
+                    }
+
+                    &.active>a {
+                        color: #778ca3;
+                    }
+                }
+            }
+        }
+    }
+
+    form.condition-search {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        select {
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // appearance: none;
+            // background: url(/static/svg/icon/chevron-down.svg) no-repeat 95% 50%;
+            @include adminSelect;
+            width: 100px;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 1rem;
+
+            @media(max-width: $mobile) {
+                & {
+                    flex: 3;
+                }
+            }
+        }
+
+        input,
+        button {
+            @include adminButton;
+            font-size: 1rem;
+        }
+
+        input {
+            @media(max-width: $mobile) {
+                & {
+                    margin-left: .7rem;
+                    flex: 5;
+                }
+            }
+
+            @media(min-width: $mobile) {
+                & {
+                    margin: 0 .7rem;
+                }
+            }
+        }
+
+        button {
+            background-color: rgb(84, 116, 116);
+            color: cornsilk;
+            opacity: .9;
+
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 1px 10px rgba(0, 0, 0, .5);
+            }
+
+            @media(max-width: $mobile) {
+                & {
+                    width: 100%;
+                    margin-top: .7rem;
+                }
+            }
+        }
+    }
+}

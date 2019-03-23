@@ -1,0 +1,74 @@
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--headline--list
+        article.headline
+            ul
+                li
+                    .filled
+                        figure
+                            img(src="https://i.ytimg.com/vi/mCsuVa-cfTE/maxresdefault.jpg")
+                        .contents
+                            .title 
+                                | 리퀴디티 네트워크(Liquidity Network) 가 #HackTravel hackathon에 참여하다
+                            .project
+                                img(src="/assets/image/project/ambrosus.png")
+                                span Ambrosus
+                        .remove
+                            //- img(src="https://icongr.am/feather/x.svg?size=70&color=555555")
+                            div
+                            div
+                li
+                    .empty.active
+                        img(src="https://icongr.am/feather/plus.svg?size=32&color=000000")
+                -   for (var i = 1; i <= 4; i++)
+                    li
+                        .empty
+                            img(src="https://icongr.am/feather/plus.svg?size=32&color=000000")
+        article.control
+            .new
+                a(href="./input.html") Add
+            select
+                option(selected disabled) 프로젝트 선택
+                - var projects = ['앰브로서스', '페이파이', '플레이키', '리퀴드', '와인딩트리', '텔레그램']
+                each p in projects
+                    option= p
+        article.list
+            .head
+                ul
+                    li
+                        input(type="checkbox" id="allcheck")
+                        label(for="allcheck")
+                            span
+                    - let head = ['#', '제목', '작성자', '작성일']
+                    each h in head
+                        li= h
+            .body
+                ul.selected
+                    li 6
+                    li 1
+                    li 제목 부분이며, 선택된 row입니다.
+                    li 프로젝트명
+                    li 18-11-30
+                - for (let i = 2; i < 16; i++)
+                    ul
+                        li
+                            //- input(type="checkbox" id=`b${i}`)
+                            //- label(for=`b${i}`)
+                            //-     span
+                        li= i
+                        - let body = ['제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.제목 부분입니다.', '프로젝트명', '18-11-30']
+                        each b in body
+                            li= b
+                //- .empty--data--box 데이터가 없습니다.
+            .footer
+                ul
+                    li
+                        a(href="#") Prev
+                    li.page.active
+                        a(href="#") 1
+                    - for (let i = 2; i <= 5; i++)
+                        li.page
+                            a(href="#")= i
+                    li
+                        a(href="#") Next

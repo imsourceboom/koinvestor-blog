@@ -1,0 +1,18 @@
+extends ../_layout
+
+block main
+    section.project
+        article.selected
+            a(href="http://www.naver.com" target="_blank")
+                img(src="/assets/svg/project/telegram.svg")
+                span.ko 텔레그램
+                span.en TON
+            div 분산형 클라우드 게이밍 플랫폼
+        article.contents.in--section--project
+            .projects
+                include ../components/menu
+                .empty
+                    .stick
+                    .comment COMING SOON..
+                include ../components/grid
+                include ../components/loading

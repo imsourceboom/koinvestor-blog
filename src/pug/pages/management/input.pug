@@ -1,0 +1,46 @@
+extends ../../_layout-admin
+
+block admin
+    section.admin--contents.admin--management--input
+        form(action="" method="post")
+            .project-image-container
+                figure
+                    img(src="/assets/image/project/telegram.png")
+                    figcaption Ambrosus
+            label.name-label 프로젝트 영문명
+                div
+                input(type="text").omission
+            label.name-label 프로젝트 한글명
+                div
+                input(type="text")
+            label.name-label 프로젝트 심볼&nbsp;&nbsp;&nbsp;
+                div
+                input(type="text")
+            .description
+                input(type="text" placeholder="프로젝트 설명")
+            .filebox
+                input(type="text" value="대표이미지" class="file-view" disabled)
+                label(for="filename") 업로드
+                input(type="file" id="filename" class="file-hidden" hidden)
+            .homepage-link
+                input(type="text" placeholder="홈페이지 링크")
+            .use-wrap 사용여부
+                div
+                label
+                    input(type="radio" name="use-whether")
+                    | 사용
+                label
+                    input(type="radio" name="use-whether")
+                    | 사용하지 않음
+            .buttons
+                div
+                    .warning.block *필수정보 누락
+                    button(type="submit") 
+                        span 등록
+                        div
+                div
+                    .dummy 더미공간
+                    button(type="button")
+                        span 
+                            a(href="./list.html") 목록
+                        div

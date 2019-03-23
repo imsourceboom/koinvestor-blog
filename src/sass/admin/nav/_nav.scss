@@ -1,0 +1,74 @@
+.admin--menu {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    height: 3.5rem;
+    width: 100%;
+    background-color: #fff;
+    // border-right: 1px solid rgba(0, 0, 0, 0.1);
+    // box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+
+    @media (min-width: $tablet) {
+        & {
+            height: 4rem;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        & {
+            width: 275px;
+            height: 100%;
+        }
+    }
+
+    ul {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (min-width: $desktop) {
+            & {
+                height: initial;
+                display: initial;
+                @include centeredX;
+                top: 7rem;
+            }
+        }
+
+        li {
+            cursor: pointer;
+            transition: .5s;
+            box-sizing: border-box;
+
+            &.active {
+                color: rgba(0, 0, 0, .64);
+                font-weight: 500;
+            }
+
+            @media (min-width: $desktop) {
+                & {
+                    margin-bottom: 3rem;
+
+                    &.active {
+                        transform: scale(1.1);
+                    }
+
+                    &:hover {
+                        animation: hover .7s infinite alternate;
+                    }
+
+                    @keyframes hover {
+                        from {
+                            opacity: .1;
+                        }
+
+                        to {
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.admin--contents {
+
+    @include adminSection;
+
+    .omission {
+        border-color: crimson !important;
+    }
+
+    @import 'components/control';
+
+    @import 'project/list';
+    @import 'project/input';
+
+    @import 'management/list';
+    @import 'management/input';
+
+    @import 'member/list';
+    @import 'member/input';
+
+    @import 'headline/list';
+}

@@ -1,0 +1,32 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+    meta(name="title", content="Koinvestor Blog")
+    meta(name="description", content="Koinvestor Blog")
+    meta(name="keywords", content="koinvestor, blog, blockchain, korea investor, korea, investor")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="format-detection", content="telephone=no, address=no, email=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+
+    title KOINVESTOR Blog
+    link(rel="stylesheet", href=`/css/main.css`)
+
+    script(src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer)
+
+    block javascript
+      script(src="/js/app.js" defer)
+
+
+  //- 옮겨야 할 마크업
+  body
+    //- block intro
+
+    include layout/header
+
+    main.admin
+      include layout/nav
+      block admin
+
+    //- include layout/footer

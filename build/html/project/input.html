@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="title" content="Koinvestor Blog">
+    <meta name="description" content="Koinvestor Blog">
+    <meta name="keywords" content="koinvestor, blog, blockchain, korea investor, korea, investor">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>KOINVESTOR Blog</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer></script>
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo-wrap"><a href="/index.html"><img class="logo" src="/assets/svg/koinvestor_logo.svg" alt=""></a></div>
+        <div class="admin-icons"><a href="/html/project/list.html"><img src="/assets/svg/icon/user.svg" alt=""><img src="/assets/svg/icon/log-out.svg" alt=""></a></div>
+        <div class="menu"><span>프로젝트 선택</span><img src="/assets/svg/icon/chevron-down.svg" alt=""></div>
+        <div class="menu-box">
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/svg/icon/box.svg" style="opacity: .5;" alt=""></div>
+            <div class="text-wrap">
+              <spna>전체보기 </spna>
+            </div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/ambrosus.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>앰브로서스(AMB)</span></a></div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/paypie.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>페이파이(PPP)</span></a></div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/playkey.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>플레이키(PKY)</span></a></div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/liquid.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>리퀴드(QASH)</span></a></div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/windingtree.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>와인딩트리(LIF)</span></a></div>
+          </div>
+          <div class="items">
+            <div class="img-wrap"><img src="/assets/image/project/telegram.png" alt=""></div>
+            <div class="text-wrap"><a href="/html/project.html"><span>텔레그램(GRAM)</span></a></div>
+          </div>
+        </div>
+        <div class="search-box">
+          <label for="search-input"><img class="search-icon" src="/assets/svg/icon/search.svg" alt=""></label>
+        </div>
+        <form class="search-txt">
+          <input type="text" id="search-input" placeholder="Search"><img class="search-close" src="/assets/svg/icon/x.svg" alt="">
+        </form>
+      </div>
+    </header>
+    <main class="admin">
+      <nav class="admin--menu">
+        <ul>
+          <li class="active"><a href="/html/project/list.html">프로젝트</a></li>
+          <li><a href="/html/member/list.html">회원관리</a></li>
+          <li><a href="/html/management/list.html">프로젝트 관리</a></li>
+          <li><a href="/html/headline/list.html">메인 관리</a></li>
+        </ul>
+      </nav>
+      <section class="admin--contents admin--project--input">
+        <form action="" method="post">
+          <div class="select">
+            <div class="selected-image--wrap"><img src="/static/image/project/ambrosus.png" alt=""></div>
+            <select>
+              <option selected disabled>프로젝트 선택</option>
+              <option>앰브로서스</option>
+              <option>페이파이</option>
+              <option>플레이키</option>
+              <option>리퀴드</option>
+              <option>와인딩트리</option>
+              <option>텔레그램</option>
+            </select>
+          </div>
+          <input class="author omission" type="text" placeholder="작성자">
+          <input class="title" type="text" placeholder="제목을 입력하세요.">
+          <div class="filebox">
+            <input class="file-view" type="text" value="대표이미지" disabled>
+            <label for="filename">업로드</label>
+            <input class="file-hidden" type="file" id="filename" hidden>
+          </div>
+          <input class="source" type="text" placeholder="출처">
+          <input class="date" type="text" placeholder="원문날짜">
+          <div class="manual"><a href="/manual.html" target="_blank">업로드 매뉴얼</a></div>
+          <div class="cke_wrap">
+            <textarea rows="30"></textarea>
+            <div></div>
+          </div>
+          <div class="buttons">
+            <div>
+              <div class="warning block">*필수정보 누락</div>
+              <button type="submit"> <span>등록</span>
+                <div> </div>
+              </button>
+            </div>
+            <div>
+              <div class="dummy">더미공간</div>
+              <button type="button"> <span> <a href="./list.html">목록</a></span>
+                <div></div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

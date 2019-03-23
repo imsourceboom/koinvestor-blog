@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+
+.loading {
+    position: relative;
+    @include flexCentered;
+    // height: 50px;
+    animation: advent .5s;
+    // background-color: rgba(240, 33, 130, .1);
+
+    @media (min-width: $tablet) {
+        & {
+            height: 50px;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        & {
+            height: 100px;
+        }
+    }
+
+    @keyframes advent {
+        0% {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    .loading-text {
+
+        span {
+            display: inline-block;
+            margin: 0 5px;
+            color: rgba(0, 0, 0, .34);
+            font-family: 'Quattrocento Sans', sans-serif;
+            font-size: 20px;
+
+            @for $i from 0 through 6 {
+                &:nth-child(#{$i + 1}) {
+                    filter: blur(0px);
+                    animation: blur-text 1.5s (#{$i/5}s) infinite linear alternate;
+                }
+            }
+
+            @media (min-width: $tablet) {
+                & {
+                    font-size: 22px;
+                }
+            }
+
+            @media (min-width: $desktop) {
+                & {
+                    font-size: 24px;
+                }
+            }
+
+            @keyframes blur-text {
+                0% {
+                    filter: blur(0px);
+                }
+
+                100% {
+                    filter: blur(4px)
+                }
+            }
+        }
+
+    }
+}

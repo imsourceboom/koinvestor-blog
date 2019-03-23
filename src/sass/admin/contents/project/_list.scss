@@ -1,0 +1,227 @@
+&.admin--project--list {
+    ul.sort {
+        display: flex;
+        padding-top: 1rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.on {
+                opacity: 1;
+                font-weight: 500;
+            }
+
+            &.on::before {
+                content: url('https://icongr.am/feather/check.svg?size=15&color=1e90ff');
+                margin-top: 2px;
+            }
+        }
+    }
+
+    article.list {
+        padding: 1rem 0;
+
+        input[type='checkbox'] {
+            @include customCheckbox(#f2f2f2);
+        }
+
+        // 체크박스 설정 (새로운 디자인)
+        /*
+            input[type="checkbox"] {
+                display: none;
+    
+                &+label {
+                    display: inline-block;
+                    width: 1rem;
+                    height: 1rem;
+                    // border: 1px solid rgba(0, 0, 0, .3);
+                    border: 1px solid #f2f2f2;
+                    border-radius: .25rem;
+                    cursor: pointer;
+    
+                    span {
+                        display: inline-block;
+                        width: 10px;
+                        height: 3px;
+                        background-color: red;
+                        // vertical-align: middle;
+                        opacity: 0;
+                        transition: .5s;
+                        transform: rotate(45deg) translate(.2rem, .43rem);
+    
+                        &::after {
+                            display: inline-block;
+                            content: '';
+                            width: 15px;
+                            height: 3px;
+                            background-color: red;
+                            transform: rotate(90deg) translate(-1.2rem, -.06rem);
+                        }
+                    }
+                }
+    
+                &:checked+label {
+                    span {
+                        opacity: 1;
+                    }
+                }
+            }
+            */
+
+        .head,
+        .body {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: #778ca3;
+                color: #f2f2f2;
+                border-radius: 0.25rem 0.25rem 0 0;
+
+                li {
+                    text-align: center;
+                    padding: 0.5rem 0;
+                }
+
+                li:first-child {
+                    // text-align: initial;
+                    flex: 1;
+                    order: 1;
+                }
+
+                li:nth-child(2) {
+                    flex: 2;
+                    order: 2;
+                }
+
+                li:nth-child(3) {
+                    width: 100%;
+                    order: 5;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                li:nth-child(4) {
+                    flex: 4;
+                    order: 3;
+                }
+
+                li:last-child {
+                    flex: 4;
+                    order: 4;
+                }
+
+                @media (min-width: $tablet) {
+                    & {
+                        li {
+                            padding: 1rem 0;
+                        }
+
+                        li:first-child {
+                            flex: 1;
+                            order: 1;
+                        }
+
+                        li:nth-child(2) {
+                            flex: 2;
+                            order: 2;
+                        }
+
+                        li:nth-child(3) {
+                            flex: 10;
+                            order: 3;
+                        }
+
+                        li:nth-child(4) {
+                            flex: 3;
+                            order: 4;
+                        }
+
+                        li:last-child {
+                            flex: 3;
+                            order: 5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            ul {
+                background-color: #fff;
+                border-radius: initial;
+                color: rgba(0, 0, 0, 0.54);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.64);
+                    font-weight: 500;
+                    transform: translateY(-1px);
+                    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+                }
+
+                input[type='checkbox'] {
+                    @include customCheckbox();
+                }
+            }
+
+            .empty--data--box {
+                padding: 10rem 0;
+                @include flexCentered;
+            }
+        }
+
+        .footer {
+            ul {
+                display: flex;
+                background-color: #778ca3;
+                justify-content: center;
+                padding: 0.57rem 0;
+                border-radius: 0 0 0.25rem 0.25rem;
+
+                li {
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    border-radius: 0.25rem;
+
+                    &.active {
+                        background-color: #f2f2f2;
+                    }
+
+                    &:hover {
+                        animation: pagehover 0.7s alternate infinite;
+
+                        @keyframes pagehover {
+                            from {
+                                background-color: rgba(255, 255, 255, 0.1);
+                            }
+
+                            to {
+                                background-color: rgba(255, 255, 255, 0.3);
+                            }
+                        }
+                    }
+
+                    a {
+                        color: #f2f2f2;
+                    }
+
+                    &.active > a {
+                        color: #778ca3;
+                    }
+                }
+            }
+        }
+    }
+}
