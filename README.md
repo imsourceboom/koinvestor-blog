@@ -1,7 +1,5 @@
 # KOINVESTOR BLOG
 
-## Commands
-
 ```bash
 welcome to koinvestor
 ```
@@ -11,3 +9,11 @@ welcome to koinvestor
 -   blockchain
 -   investment
 -   partners
+
+### product site
+
+> https://blog.koinvestor.com
+
+### development site
+
+> https://koinvestor-blog.netlify.com
