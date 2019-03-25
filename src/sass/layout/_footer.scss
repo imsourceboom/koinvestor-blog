@@ -11,14 +11,25 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
 
+        .copyright,
+        .email {
+            width: 100%;
+            text-align: center;
+        }
+
         @media (min-width: $tablet) {
             & {
                 padding: 0 1.8rem;
                 justify-content: space-between;
+
+                .copyright,
+                .email {
+                    width: initial;
+                }
             }
         }
 
-        & .copylight,
+        & .copyright,
         & .email {
             opacity: .5;
         }
