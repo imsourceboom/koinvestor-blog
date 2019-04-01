@@ -1,5 +1,5 @@
 // import './masonry/masonry';
-// import './intro';
+import './intro';
 // import './menu';
 import './header';
 import './components/detail';

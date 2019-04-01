@@ -1,0 +1,24 @@
+.intro {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    transition: .7s;
+
+    &.off {
+        opacity: 0;
+        z-index: -1;
+        // display: none;
+    }
+
+    img {
+        @include centered();
+        width: 13rem;
+
+        @media (min-width: $mobile) {
+            width: 20rem;
+        }
+    }
+}

@@ -21,7 +21,7 @@ const conf = {
         js: {
             src: './src/es6/**/*.js',
             build: './build/js',
-            index: './src/es6/index.js',
+            index: './src/es6/index.js'
         },
         sass: {
             src: './src/sass/**/*.scss',
@@ -115,7 +115,9 @@ gulp.task('html', [], function () {
 
 gulp.task('sass', [], function () {
     const sassErrHandler = conf.errorHandler('sass');
-    return gulp.src(conf.paths.sass.src)
+    return (
+        gulp
+        .src(conf.paths.sass.src)
         .pipe(sourcemaps.init()) // init sourcemaps
         .pipe(sass(conf.sass.process).on('error', sassErrHandler))
         .pipe(autoprefixer(conf.sass.autoprefixer))
@@ -128,6 +130,7 @@ gulp.task('sass', [], function () {
                 stream: true
             })
         )
+    );
 });
 
 gulp.task('js', [], function buildHTML() {
