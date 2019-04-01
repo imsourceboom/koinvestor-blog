@@ -1,6 +1,7 @@
 // import './masonry/masonry';
-import './intro';
 // import './menu';
+import './browserBlock'
+import './intro';
 import './header';
 import './components/detail';
 import './components/result';
