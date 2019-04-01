@@ -1,6 +1,7 @@
 {
-    "name": "KOINVESTOR Blog",
-    "short_name": "Koinvestor Blog",
+    "name": "KOINVESTOR",
+    "short_name": "KOINVESTOR",
+    "description": "Koinvestor promptly and accurately delivers the official information of the global blockchain projects, through mutual cooperation, to the Asian investors.",
     "icons": [{
             "src": "/assets/favicons/android-icon-36x36.png",
             "sizes": "36x36",
@@ -36,9 +37,17 @@
             "sizes": "192x192",
             "type": "image/png",
             "density": "4.0"
+        },
+        {
+            "src": "/assets/favicons/android-icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "density": "4.0"
         }
     ],
     "start_url": "/",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "theme-color": "#ffffff",
+    "background-color": "#ffffff"
 }
