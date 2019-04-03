@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.1.5",
     "babel-loader": "^8.0.4",
     "browser-sync": "^2.26.3",
-    "del": "^4.0.0",
+    "del": "^4.1.0",
     "gulp": "3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-hash-filename": "^2.0.1",
@@ -31,7 +31,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8",
-    "imagesloaded": "^4.1.4",
     "merge-stream": "^1.0.1",
     "run-sequence": "^2.2.1",
     "webpack-stream": "^5.1.1"
