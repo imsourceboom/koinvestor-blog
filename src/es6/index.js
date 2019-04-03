@@ -6,6 +6,7 @@ import './header';
 import './components/detail';
 import './components/result';
 import './admin';
+import './clipboard'
 
 if (document.location.protocol == 'http:') {
     document.location.href = document.location.href.replace('http:', 'https:');

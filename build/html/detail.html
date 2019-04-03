@@ -39,6 +39,7 @@
     <title>Koinvestor Blog</title>
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated" async defer></script>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.10/clipboard.min.js" async defer></script>
     <script src="/js/app.js" defer></script>
   </head>
   <body>
@@ -118,7 +119,8 @@
           </div>
           <div class="buttons">
             <div class="alert">주소가 복사되었습니다.</div>
-            <button class="share">공유하기</button>
+            <input type="hidden" id="input-url">
+            <button class="share btn-copy">공유하기</button>
             <button class="list-view">목록보기</button>
           </div>
         </article>
