@@ -4,10 +4,13 @@ import {
 } from '../elements'
 
 
+
 const input = copy.inputEle;
 const button = copy.buttonEle;
 
-input.value = location.href;
+if (input !== null) {
+    input.value = location.href;
+}
 
 var clipboard = new Clipboard('.btn-copy', {
     text: function () {
