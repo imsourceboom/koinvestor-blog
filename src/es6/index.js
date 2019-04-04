@@ -1,5 +1,6 @@
 // import './masonry/masonry';
 // import './menu';
+import './httpTohttps'
 import './browserBlock'
 import './intro';
 import './header';
@@ -7,7 +8,3 @@ import './components/detail';
 import './components/result';
 import './admin';
 import './clipboard'
-
-if (document.location.protocol == 'http:') {
-    document.location.href = document.location.href.replace('http:', 'https:');
-}
