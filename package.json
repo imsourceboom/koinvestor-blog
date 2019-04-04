@@ -15,6 +15,7 @@
   "author": "imsourceboom",
   "license": "ISC",
   "dependencies": {
+    "clipboard": "^2.0.4",
     "flatpickr": "^4.5.2",
     "reset-css": "^4.0.1"
   },

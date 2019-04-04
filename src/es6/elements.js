@@ -79,6 +79,11 @@ const ele = {
     }
 };
 
+export const copy = {
+    inputEle: document.querySelector('#input-url'),
+    buttonEle: document.querySelector('.btn-copy')
+}
+
 console.log('WebPack On!!');
 
 export default ele;

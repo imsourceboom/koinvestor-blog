@@ -1,9 +1,17 @@
-var inputCopied = document.querySelector('#input-url');
-var copiedButton = document.querySelector('.btn-copy');
+import Clipboard from 'clipboard';
+import {
+    copy
+} from '../elements'
+
+
+const input = copy.inputEle;
+const button = copy.buttonEle;
+
+input.value = location.href;
 
 var clipboard = new Clipboard('.btn-copy', {
     text: function () {
-        return document.querySelector('input[type=hidden]').value;
+        return input.value;
     }
 });
 
@@ -13,11 +21,9 @@ clipboard.on('success', function (e) {
 });
 
 
-inputCopied.value = location.href;
-
 //safari
 if (navigator.vendor.indexOf("Apple") == 0 && /\sSafari\//.test(navigator.userAgent)) {
-    copiedButton.addEventListener('click', function () {
+    button.addEventListener('click', function () {
         // var msg = window.prompt("Copy this link", location.href);
     })
 }
