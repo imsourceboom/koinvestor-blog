@@ -115,8 +115,7 @@ gulp.task('html', [], function () {
 
 gulp.task('sass', [], function () {
     const sassErrHandler = conf.errorHandler('sass');
-    return (
-        gulp
+    return gulp
         .src(conf.paths.sass.src)
         .pipe(sourcemaps.init()) // init sourcemaps
         .pipe(sass(conf.sass.process).on('error', sassErrHandler))
@@ -130,7 +129,6 @@ gulp.task('sass', [], function () {
                 stream: true
             })
         )
-    );
 });
 
 gulp.task('js', [], function buildHTML() {
