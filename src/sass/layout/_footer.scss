@@ -15,6 +15,10 @@ footer {
         .email {
             width: 100%;
             text-align: center;
+
+            a {
+                color: inherit;
+            }
         }
 
         @media (min-width: $tablet) {
