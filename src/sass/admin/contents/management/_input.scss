@@ -151,6 +151,10 @@
 
             label {
                 cursor: pointer;
+
+                input[type="radio"] {
+                    appearance: radio;
+                }
             }
 
             label:nth-child(2) {
