@@ -82,7 +82,12 @@ const ele = {
 export const copy = {
     inputEle: document.querySelector('#input-url'),
     buttonEle: document.querySelector('.btn-copy')
-}
+};
+
+export const resource = {
+    self: doc.querySelector('article.resource'),
+    trigger: doc.querySelector('article.resource hgroup.trigger')
+};
 
 console.log('WebPack On!!');
 

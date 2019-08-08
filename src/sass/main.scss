@@ -1,20 +1,12 @@
-@import 'utils/var',
-'utils/mixins';
+@import 'utils/var', 'utils/mixins';
 
-@import 'base/reset',
-'base/typography',
-'base/base';
+@import 'base/reset', 'base/typography', 'base/base';
 
 @import 'library/flatpickr';
 
-@import 'layout/main',
-'layout/header',
-'layout/footer',
-'layout/intro';
+@import 'layout/main', 'layout/header', 'layout/footer', 'layout/intro';
 
-@import 'components/grid',
-'components/loading',
-'components/menu';
+@import 'components/grid', 'components/loading', 'components/resource', 'components/menu';
 
 @import 'pages/root';
 @import 'pages/project';
@@ -22,6 +14,5 @@
 @import 'pages/login';
 @import 'pages/result';
 @import 'pages/mypage';
-
 
 @import 'admin/admin';
