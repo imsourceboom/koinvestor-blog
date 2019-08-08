@@ -8,6 +8,18 @@ article.resource {
 
     &.active {
         max-height: 500px;
+
+        hgroup.trigger {
+            .plus {
+                transform: rotate(765deg);
+                border: 1px solid rgba(0, 0, 0, 0);
+
+                &::after,
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     hgroup.trigger {
@@ -26,6 +38,7 @@ article.resource {
             border: 1px solid rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             margin: 0 0.5rem;
+            transition: 0.4s;
 
             &::after,
             &::before {
