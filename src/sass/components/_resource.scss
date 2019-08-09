@@ -11,12 +11,16 @@ article.resource {
 
         hgroup.trigger {
             .plus {
-                transform: rotate(765deg);
-                border: 1px solid rgba(0, 0, 0, 0);
+                // transform: rotate(765deg);
+                // border: 1px solid rgba(0, 0, 0, 0);
 
-                &::after,
+                // &::after,
+                // &::before {
+                //     width: 100%;
+                // }
+
                 &::before {
-                    width: 100%;
+                    opacity: 0;
                 }
             }
         }
