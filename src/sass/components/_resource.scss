@@ -75,7 +75,7 @@ article.resource {
         flex-wrap: wrap;
 
         @media (min-width: 1024px) {
-            padding: 1rem 0 1.25rem;
+            padding: 1rem 0 0.5rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         }
 
@@ -92,7 +92,8 @@ article.resource {
 
             @media (min-width: 1024px) {
                 width: 33.333333%;
-                padding: 0.4rem 0;
+                padding: 0.4rem 0 0;
+                margin-bottom: 1rem;
                 border: 0;
                 border-right: 1px solid rgba(0, 0, 0, 0.3);
 
@@ -101,8 +102,9 @@ article.resource {
                 &:nth-child(9) {
                     border: 0;
                 }
+
                 &:last-child {
-                    padding: 0.4rem 0;
+                    padding: 0.4rem 0 0;
                 }
             }
 
