@@ -2,19 +2,19 @@ header
     .container
         .logo-wrap
             a(href="/index.html")
-                img.logo(src="/assets/svg/koinvestor_logo.svg" alt="")
+                img.logo(src="/assets/images/svg/koinvestor_logo.svg" alt="")
         .admin-icons
             //- a Tag는 라우트를 위해 개발시에만 사용
             a(href="/html/project/list.html")
-                img(src="/assets/svg/icon/user.svg" alt="")
-                img(src="/assets/svg/icon/log-out.svg" alt="")
+                img(src="/assets/images/svg/icon/user.svg" alt="")
+                img(src="/assets/images/svg/icon/log-out.svg" alt="")
         .menu
             span 프로젝트 선택
-            img(src="/assets/svg/icon/chevron-down.svg" alt="")
+            img(src="/assets/images/svg/icon/chevron-down.svg" alt="")
         .menu-box
             .items
                 .img-wrap
-                    img(src='/assets/svg/icon/box.svg', style='opacity: .5;' alt="")
+                    img(src='/assets/images/svg/icon/box.svg', style='opacity: .5;' alt="")
                 .text-wrap
                     spna 전체보기 
             -
@@ -27,18 +27,18 @@ header
             each e in double
                 .items
                     .img-wrap
-                        img(src=`/assets/image/project/${e.project}.png` alt="")
+                        img(src=`/assets/images/image/project/${e.project}.png` alt="")
                     .text-wrap
                         a(href="/html/project.html")
                             span= e.name + '(' + e.symbol + ')'
         .search-box
             label(for="search-input")
-                img.search-icon(src="/assets/svg/icon/search.svg" alt="")
+                img.search-icon(src="/assets/images/svg/icon/search.svg" alt="")
         form.search-txt
             input(type="text" id="search-input" placeholder="Search")
-            img.search-close(src="/assets/svg/icon/x.svg" alt="")
+            img.search-close(src="/assets/images/svg/icon/x.svg" alt="")
 
         //- .search-box
             input#header-search.txt(type="text" placeholder="search")
             label(for="header-search")
-                img.search-icon(src="/assets/svg/icon/search.svg")
+                img.search-icon(src="/assets/images/svg/icon/search.svg")
